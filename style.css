@@ -1,0 +1,178 @@
+/* الخط العربي العام */
+body {
+    font-family: 'Tajawal', sans-serif;
+    background-color: #f9f6f1;
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+    color: #333;
+  }
+  
+  /* رأس الموقع */
+  header {
+    background-color: #754c32;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .logo {
+    display: block;
+    margin: 0 auto 5px auto;
+    width: 200px !important;   /* الحجم الحقيقي */
+    max-width: none;           /* تجاهل القيود */
+    height: auto;
+  }
+  
+  
+  
+  .subtitle {
+    font-size: 18px;
+    margin-top: 0px;  /* أزل المسافة من فوق */
+    margin-bottom: 0px;
+    color: #f5f2ec;
+  }
+  
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: #4a3624;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s;
+  }
+  
+  nav ul li a:hover,
+  nav ul li a.active {
+    background-color: #7b5d47;
+    border-radius: 6px;
+  }
+  
+  /* عبارة الجائزة */
+  .highlight {
+    background-color: #e7d7c1;
+    text-align: center;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .highlight a {
+    color: #4e342e;
+    text-decoration: underline;
+  }
+  
+  /* الحاوية */
+  .container {
+    width: 90%;
+    margin: auto;
+    padding: 20px 0;
+  }
+  
+  
+  /* واجهة المهارات */
+  .competition-section {
+    background: #fff;
+    border: 2px solid #d6c2a8;
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+  }
+  
+  .selectors {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  select, button {
+    width: 300px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+  }
+  
+  button {
+    background-color: #5e412f;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #7b5d47;
+  }
+  
+  /* عرض النص */
+  .content-box {
+    background: #fff;
+    border: 2px solid #c0b29f;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    margin-top: 20px;
+    max-width: 700px;
+    margin-inline: auto;
+    text-align: right;
+    line-height: 1.8;
+    font-size: 17px;
+    color: #222;
+  }
+  
+
+/* تعديل خلفية البطاقات */
+.card, .mini-card {
+    background-color: #f9f6f1;
+  }
+  
+  /* تحسين عرض البطاقات الداخلية */
+  .mini-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 16px;
+    margin-top: 15px;
+  }
+  
+  .mini-card {
+    border: 1px solid #dbc9ac;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease;
+  }
+  .mini-card:hover {
+    transform: translateY(-3px);
+  }
+  
+  /* فاصل مرئي بين الأقسام */
+  .card:not(:last-child) {
+    border-bottom: 3px dashed #d6c5aa;
+    margin-bottom: 40px;
+    padding-bottom: 25px;
+  }
+  
+
+
+  /* تذييل */
+  footer {
+    background-color: #5e412f;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+  }  
+  

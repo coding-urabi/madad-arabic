@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مداد العربية</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+
+</head>
+<body>
+  <header>
+    <div class="container">
+        <img src="logo.png" alt="شعار مداد العربية" class="logo">
+
+      
+      <p class="subtitle">محتوى رقمي تعليمي مصنف، يخدم كل مهتم بالعربية</p>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="about.html">عن المشروع</a></li>
+        <li><a href="contact.html">تواصل معنا</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="highlight">
+    <p>
+      تم تصميم هذا الموقع خصيصًا للمشاركة في 
+      <a href="https://prize.ksaa.gov.sa/site/index" target="_blank">جائزة مجمع الملك سلمان العالمي للغة العربية</a>
+    </p>
+    <p><strong>مؤسس الموقع:</strong> يونس سالم عرابي</p>
+  </section>
+  
+  <main class="container">
+
+
+    <section id="competition" class="competition-section">
+      <h2>اكتشف النصوص حسب المهارات</h2>
+      <div class="selectors">
+        <select id="mainSkill">
+          <option value="">اختر المهارة الرئيسية</option>
+          <option value="الاستماع" title="القدرة على فهم الرسائل الصوتية والمعنوية من خلال الاستماع إلى النصوص والمحادثات باللغة العربية.">الاستماع</option>
+          <option value="التحدث" title="القدرة على التعبير عن نفسه والتواصل مع الآخرين باللغة العربية بشكل واضح وصحيح.">التحدث</option>
+          <option value="القراءة" title="القدرة على فهم وقراءة النصوص المكتوبة باللغة العربية، بما في ذلك تحليل المفردات، وفهم المعاني، وتفسير الرسائل.">القراءة</option>
+          <option value="الكتابة" title="القدرة على كتابة نصوص منظمة ومترابطة باللغة العربية، باستخدام القواعد اللغوية والإملائية بشكل صحيح.">الكتابة</option>
+          <option value="القواعد" title="فهم قواعد اللغة العربية، مثل الأفعال، الأسماء، الجمل الاسمية والفعلية، وأزمنة الأفعال، والضمائر، والربط بين الجمل.">القواعد</option>
+          <option value="المفردات" title="توسيع رصيد الطالب من الكلمات والمفردات التي تساعده في فهم اللغة والتعبير عن نفسه.">المفردات</option>
+          <option value="التفسير والتحليل" title="القدرة على تفسير المعاني العميقة للنصوص وفهم الأفكار المجردة من خلال اللغة.">التفسير والتحليل</option>
+          <option value="الإملاء" title="مهارة كتابة الكلمات بشكل صحيح حسب القواعد الإملائية للغة العربية.">الإملاء</option>
+        </select>
+
+        <select id="subSkill">
+          <option value="">اختر المهارة الفرعية</option>
+        </select>
+
+        <select id="term">
+          <option value="">اختر المصطلح</option>
+        </select>
+
+        <button id="showContent">عرض النص</button>
+      </div>
+
+      <div id="contentBox" class="content-box" style="display:none;">
+        <div id="contentText"></div>
+        <button id="copyButton">نسخ المحتوى</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2025 مداد العربية – جميع الحقوق محفوظة</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
