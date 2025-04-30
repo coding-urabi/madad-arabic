@@ -72,7 +72,10 @@ document.getElementById("subSkill").addEventListener("change", () => {
 
   termSelect.innerHTML = '<option value="">اختر المصطلح</option>';
 
-  const filteredTerms = allData.filter(item => item["المهارة الفرعية"] === selectedSub);
+  const filteredTerms = allData.filter(item => 
+    item["المهارة الفرعية"]?.trim() === selectedSub.trim()
+  );
+  
   const uniqueTerms = [...new Set(filteredTerms.map(item => item["المصطلح"]))];
 
   uniqueTerms.forEach(term => {
@@ -96,9 +99,10 @@ document.getElementById("showContent").addEventListener("click", () => {
   }
 
   const match = allData.find(item =>
-    item["المهارة الفرعية"] === selectedSub &&
-    item["المصطلح"] === selectedTerm
+    item["المهارة الفرعية"]?.trim() === selectedSub.trim() &&
+    item["المصطلح"]?.trim() === selectedTerm.trim()
   );
+  
 
   if (match) {
     document.getElementById("contentText").textContent =
