@@ -477,7 +477,7 @@ document.getElementById("showContent")?.addEventListener("click", async () => {
         "لم يتم العثور على المصطلح في قاعدة البيانات. جاري توليد نصوص جديدة..."
       );
       const generated = [];
-      for (let i = 0; i < 5; i++) {
+      for (let i = 0; i < 3; i++) {
         const res = await generateFromOpenAI(term, sub);
         generated.push(res);
       }
@@ -502,7 +502,7 @@ document.getElementById("showContent")?.addEventListener("click", async () => {
       if (error) {
         console.error("خطأ في إضافة البيانات إلى قاعدة البيانات:", error);
       } else {
-        console.log("تم إضافة البيانات إلى قاعدة البيانات بنجاح",true);
+        console.log("تم إضافة البيانات إلى قاعدة البيانات بنجاح", true);
 
         // تحديث المتغير allData بالبيانات الجديدة
         allData.push({
@@ -565,9 +565,9 @@ document
           match["تم توليده"] || false
         );
       } else {
-        // توليد 5 نصوص دفعة واحدة
+        // توليد3 نصوص دفعة واحدة
         const generated = [];
-        for (let i = 0; i < 5; i++) {
+        for (let i = 0; i < 3; i++) {
           const res = await generateFromOpenAI(term, "أخرى");
           generated.push(res);
         }
