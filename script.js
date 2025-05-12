@@ -402,7 +402,7 @@ document.getElementById("showContent")?.addEventListener("click", async () => {
     }
 
     // إظهار مؤشر التحميل
-    contentDiv.innerHTML = "<p>جاري تحميل النصوص شكرًا لصبرك...</p>";
+    contentDiv.innerHTML = "<p>جاري تحميل النصوص شكرًا لصبركم...</p>";
     document.getElementById("contentBox").style.display = "block";
 
     console.log(`البحث عن نصوص للمصطلح "${term}" في المهارة "${sub}"...`);
@@ -545,7 +545,7 @@ document
       }
 
       // إظهار مؤشر التحميل
-      contentDiv.innerHTML = "<p>جاري البحث عن المصطلح شكرَا لصبرك...</p>";
+      contentDiv.innerHTML = "<p>جاري تحميل النصوص شكرًا لصبركم...</p>";
       document.getElementById("customContentBox").style.display = "block";
 
       console.log(`البحث عن المصطلح المخصص "${term}"...`);
