@@ -334,6 +334,7 @@ function displayText(
   }
 
   const textArray = Array.isArray(texts) ? texts : [texts];
+  let displayed = false;
 
   textArray.forEach((fullText) => {
     let scientific = "غير متوفر.";
@@ -371,6 +372,8 @@ function displayText(
       example = exampleMatch?.[1]?.trim() || exampleFromDB || "غير متوفر.";
     }
 
+    if (!scientific || scientific === "غير متوفر.") return;
+
     const box = document.createElement("div");
     box.className = "single-text-box";
     box.innerHTML = `
@@ -380,14 +383,26 @@ function displayText(
       <div class="example-text"><strong>🧪 مثال تطبيقي:</strong><br>${example}</div>
     `;
     contentContainer.appendChild(box);
+    displayed = true;
   });
 
-  contentContainer.closest(".content-box").style.display = "block";
+  if (displayed) {
+    const box = contentContainer.closest(".content-box");
+    if (box) box.style.display = "block";
+  }
+
+  const exportButtons = document.getElementById("exportButtons");
+  if (exportButtons) {
+    exportButtons.style.display = displayed ? "flex" : "none";
+  }
 }
 
 // عرض النصوص عند الضغط على زر "عرض النص"
 document.getElementById("showContent")?.addEventListener("click", async () => {
   try {
+    const exportButtons = document.getElementById("exportButtons");
+    if (exportButtons) exportButtons.style.display = "none";
+
     const main = document.getElementById("mainSkill").value;
     const sub = document.getElementById("subSkill").value;
     const term = document.getElementById("term").value;
@@ -532,6 +547,7 @@ document.getElementById("showContent")?.addEventListener("click", async () => {
 });
 
 // البحث المخصص عن المصطلحات
+
 document
   .getElementById("searchCustomTerm")
   ?.addEventListener("click", async () => {
@@ -600,6 +616,14 @@ document
           generated[0]?.example || "غير متوفر.",
           true
         );
+
+        // ✅ إظهار أزرار التصدير
+        const customExportButtons = document.getElementById(
+          "customExportButtons"
+        );
+        if (customExportButtons) {
+          customExportButtons.style.display = "flex";
+        }
       }
     } catch (err) {
       console.error("خطأ في البحث المخصص:", err);
